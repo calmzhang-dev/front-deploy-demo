@@ -16,7 +16,7 @@
     "url": "https://github.com/calmzhang-dev/front-deploy-demo/issues"
   },
   "homepage": "https://github.com/calmzhang-dev/front-deploy-demo#readme",
-  "dependencies": {
+  "devDependencies": {
     "@types/node": "^18.11.9"
   }
 }
