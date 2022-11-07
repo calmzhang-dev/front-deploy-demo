@@ -1,7 +1,8 @@
 version: "3"
 services:
   app:
-    # build: 从当前路径构建镜像
-    build: .
+    # build: . 是从当前路径读取 dockerfile文件 构建镜像
+    # build: ./node.dockerfile 有文件名node需要写全名
+    build: ./node.dockerfile 
     ports:
       - 3000:3000

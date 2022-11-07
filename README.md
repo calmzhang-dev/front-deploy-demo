@@ -29,5 +29,13 @@ $ docker run -d --rm -p 3000:3000 simple-node-app
 
 # 03 使用 docker-compose
 
+- 安装很简单，但是难免会遇到问题：
+- 1、安装
+curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
 
-- 
+- 2、把下载的文件授权
+sudo chmod +x /usr/local/bin/docker-compose
+
+- 3、查看版本
+docker-compose -version- 
+
