@@ -20,11 +20,11 @@ pnpm i
 
 # 使用 docker 命令行工具去构建及运行容器
 
-# 构建一个名为 simple-node-app 的镜像 // dockerfile 文件目录下执行
-$ docker build -f node.Dockerfile /**(node.Dockerfile是文件名)*/ -t simple-node-app .
+# 构建一个名为 simple-node-app 的镜像 // 在 dockerfile 文件目录下执行
+$ docker build -f node.dockerfile  -t simple-node-app . // (node.Dockerfile是文件名)
 
 # 通过docker文件中 -lah 打印关键信息方便调试
-$ docker build -f node.Dockerfile /**(node.Dockerfile是文件名)*/ -t simple-node-app . --progress plain --no-cache .
+$ docker build -f node.dockerfile -t simple-node-app . --progress plain --no-cache .
 
 # 根据该镜像运行容器
 $ docker run -d --rm -p 3000:3000 simple-node-app
@@ -58,4 +58,25 @@ docker-compose up
 ```
 
 # 04 因为是静态资源, 不必是nodejs环境, demo-4 使用 nginx(体积小,性能好)
-- 
+- 执行命令构建镜像
+```
+docker build -f node.dockerfile /**(node.Dockerfile是文件名)*/ -t simple-node-app .
+```
+
+- 查看nginx首页
+```
+// -p 3000:80 nginx 默认启动80映射到3000端口，在本地 3000 端口访问 nginx 页面 
+$ docker run -it --rm -p 3000:80 nginx:alpine
+```
+- 查看nginx配置文件
+```
+// 运行nginx容器 
+$ docker run -it --rm nginx:alpine sh
+
+// 需要退出容器输入 
+$ exit
+
+// 第一步运行可以看到nginx打印了配置文件的路径
+$ docker run -it --rm nginx:alpine sh
+$ cat /etc/nginx/conf.d/default.conf
+```
