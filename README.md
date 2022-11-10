@@ -80,3 +80,14 @@ $ exit
 $ docker run -it --rm nginx:alpine sh
 $ cat /etc/nginx/conf.d/default.conf
 ```
+
+- .dockerfile文件 指定 src/index.html 位置 , 使用 docker-compose 启动服务器
+```
+$ docker-compose up --build nginx-app // --build 是重构建服务器的意思
+``` 
+
+- 通过 volumes 映射本地 nginx 配置文件, 在本地学习配置
+
+```
+$ docker-compose -f learn-nginx.docker-compose.yaml up learn-nginx
+```
