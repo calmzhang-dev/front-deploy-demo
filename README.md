@@ -13,6 +13,11 @@ pnpm i
 # 02 使用 docker 尝试部署
 
 - 使用 serve 包启动一个服务 查看 package.josn -> script 命令
+```
+serve . -p 3000 监听3000端口
+serve -s build 可以指定build目录 并且-s标识是单页应用, 防止刷新后历史栈空找不到url资源
+```
+
 - docker cli 因为windows安装docker繁琐, 我使用了centos虚拟机
 ```javascript
 # 安装 docker:  curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
