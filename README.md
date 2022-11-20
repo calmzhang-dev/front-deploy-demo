@@ -35,7 +35,9 @@ $ docker build -f node.dockerfile -t simple-node-app . --progress plain --no-cac
 $ docker run -d --rm -p 3000:3000 simple-node-app
 ```
 
-# 03 使用 docker-compose
+# 03 使用 docker-compose 
+- 查看docker-compose 命令:
+https://app.yinxiang.com/shard/s44/nl/35125454/da5acc2a-d388-4944-83a2-31b3e3056faf?title=8.%20docker-compose%20%E5%91%BD%E4%BB%A4
 
 - 安装很简单，但是难免会遇到问题：
 - 1、安装
